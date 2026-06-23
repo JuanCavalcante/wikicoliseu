@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>08. Mercador</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 28px 42px;
+            background: #34383e;
+            color: #f2f2f2;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.45;
+        }
+
+        .page {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            color: #fff200;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 42px 0 18px;
+            color: #fff200;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 27px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        h3 {
+            margin: 28px 0 12px;
+            color: #ffcc00;
+            font-size: 21px;
+            font-style: italic;
+        }
+
+        p {
+            margin: 18px 0;
+            text-align: justify;
+            text-indent: 36px;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 6px auto 30px;
+            max-width: 560px;
+            color: #a55300;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            height: 2px;
+            flex: 1;
+            background: #c7b48a;
+        }
+
+        .diamond {
+            width: 10px;
+            height: 10px;
+            background: #a55300;
+            transform: rotate(45deg);
+            display: inline-block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0 26px;
+            background: rgba(0, 0, 0, 0.16);
+            border: 1px solid #8b7c55;
+        }
+
+        th,
+        td {
+            padding: 10px 12px;
+            border: 1px solid #6f6548;
+            vertical-align: middle;
+        }
+
+        th {
+            color: #ffcc00;
+            background: rgba(0, 0, 0, 0.28);
+            font-style: italic;
+            text-align: left;
+        }
+
+        td:not(:first-child),
+        th:not(:first-child) {
+            text-align: center;
+        }
+
+        .name {
+            color: #ffcc00;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .rarity-common {
+            color: #f2f2f2;
+        }
+
+        .rarity-uncommon {
+            color: #88d878;
+            font-weight: 700;
+        }
+
+        .rarity-rare {
+            color: #70b7ff;
+            font-weight: 700;
+        }
+
+        .rarity-very-rare {
+            color: #d89cff;
+            font-weight: 700;
+        }
+
+        ul {
+            margin: 10px 0 28px 28px;
+            padding: 0;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        strong {
+            color: #ffcc00;
+            font-style: italic;
+        }
+
+        .note {
+            color: #f8e9b0;
+            font-style: italic;
+            text-align: center;
+            text-indent: 0;
+        }
+
+        .rules {
+            border: 1px solid #8b7c55;
+            background: rgba(0, 0, 0, 0.16);
+            padding: 12px 18px;
+            margin: 18px 0 26px;
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <h1>Mercador</h1>
+        <div class="divider"><span class="diamond"></span></div>
+
+        <p>Esta seção lista os itens que podem ser comprados no Coliseu. Os valores foram definidos para acompanhar a escala dos itens iniciais, das recompensas em Gladius e dos números médios do bestiário. Itens comuns dão opções práticas, itens incomuns trazem vantagens pequenas, itens raros já mudam decisões táticas e itens muito raros devem ser compras relevantes para campeões que sobreviveram a várias batalhas.</p>
+
+        <div class="rules">
+            <ul>
+                <li><strong>Moeda:</strong> todos os preços estão em Gladius.</li>
+                <li><strong>Consumíveis:</strong> duram apenas uma cena ou combate, salvo indicação contrária.</li>
+                <li><strong>Poções:</strong> por regra do mercador, existe apenas a Poção de Restauração Simples.</li>
+                <li><strong>Bônus pequenos:</strong> efeitos de +1 ou +2 foram usados para não ultrapassar a escala dos modificadores iniciais.</li>
+                <li><strong>Dano mágico:</strong> armas mágicas têm dano menor porque ignoram Defesa física e pressionam Esquiva.</li>
+            </ul>
+        </div>
+
+        <div class="divider"><span class="diamond"></span><span class="diamond"></span><span class="diamond"></span></div>
+
+        <h2>🍖 Itens Consumíveis 🍖</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Raridade</th>
+                    <th>Preço</th>
+                    <th>Efeito</th>
+                    <th>Duração</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="name">Pão de Arena</td><td class="rarity-common">Comum</td><td>6</td><td>Recupera 5 de Fôlego ao fim do próximo turno.</td><td>1 turno</td></tr>
+                <tr><td class="name">Caldo Salgado</td><td class="rarity-common">Comum</td><td>8</td><td>Recupera 3 de Vida por turno.</td><td>3 turnos</td></tr>
+                <tr><td class="name">Maçã de Cobre</td><td class="rarity-common">Comum</td><td>10</td><td>Recebe +1 em VIG para testes contra veneno e sangramento.</td><td>1 combate</td></tr>
+                <tr><td class="name">Carne Defumada</td><td class="rarity-common">Comum</td><td>12</td><td>Recebe +1 em FOR para testes de empurrar, agarrar ou resistir queda.</td><td>1 combate</td></tr>
+                <tr><td class="name">Chá de Lumina</td><td class="rarity-common">Comum</td><td>12</td><td>Recebe +1 em VAZ para testes contra medo, confusão ou efeitos mentais.</td><td>1 combate</td></tr>
+                <tr><td class="name">Biscoito de Semente</td><td class="rarity-common">Comum</td><td>14</td><td>Recebe +1 em DES para o primeiro teste de Esquiva do combate.</td><td>Até ativar</td></tr>
+                <tr><td class="name">Ensopado do Gladiador</td><td class="rarity-uncommon">Incomum</td><td>24</td><td>Ganha 12 de Vida temporária. A Vida temporária acaba ao fim do combate.</td><td>1 combate</td></tr>
+                <tr><td class="name">Tônico de Fôlego</td><td class="rarity-uncommon">Incomum</td><td>28</td><td>Recupera 8 de Fôlego imediatamente e +2 de Fôlego no próximo turno.</td><td>2 turnos</td></tr>
+                <tr><td class="name">Ração Picante</td><td class="rarity-uncommon">Incomum</td><td>30</td><td>Recebe +1 no próximo ataque corpo a corpo. Se errar, o bônus se perde.</td><td>Até ativar</td></tr>
+                <tr><td class="name">Doce de Névoa</td><td class="rarity-uncommon">Incomum</td><td>32</td><td>Recebe +1 em Esquiva contra o primeiro ataque à distância sofrido.</td><td>Até ativar</td></tr>
+                <tr><td class="name">Poção de Restauração Simples</td><td class="rarity-uncommon">Incomum</td><td>45</td><td>Recupera 25 de Vida. Não remove condições e não pode exceder a Vida máxima.</td><td>Imediato</td></tr>
+            </tbody>
+        </table>
+
+        <p class="note">Consumíveis foram mantidos abaixo da força de uma habilidade de classe: eles ajudam em uma decisão, mas não devem vencer uma luta sozinhos.</p>
+
+        <div class="divider"><span class="diamond"></span><span class="diamond"></span><span class="diamond"></span></div>
+
+        <h2>⚒️ Materiais de Criação ⚒️</h2>
+        <h3>Alquimista — Ervas e Reagentes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingrediente</th>
+                    <th>Tipo</th>
+                    <th>Preço</th>
+                    <th>Propriedade 1</th>
+                    <th>Propriedade 2</th>
+                    <th>Propriedade 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="name">Folha de Sálix</td><td>Erva</td><td>4</td><td>Regeneração leve</td><td>Aumento de Esquiva</td><td>Purificação venenosa</td></tr>
+                <tr><td class="name">Raiz de Vyrn</td><td>Erva</td><td>4</td><td>Força temporária</td><td>Resistência a frio</td><td>Estímulo metabólico</td></tr>
+                <tr><td class="name">Flor de Lumina</td><td>Erva</td><td>5</td><td>Visão no escuro</td><td>Brilho suave</td><td>Calmante mental</td></tr>
+                <tr><td class="name">Cogumelo de Ghel</td><td>Erva</td><td>5</td><td>Veneno fraco</td><td>Alteração de cor</td><td>Estabilização mágica</td></tr>
+                <tr><td class="name">Pó de Cristal</td><td>Reagente</td><td>8</td><td>Amplificação mágica</td><td>Condução elemental</td><td>Efeito explosivo</td></tr>
+                <tr><td class="name">Casca de Tharn</td><td>Erva</td><td>5</td><td>Aumento de Defesa</td><td>Resistência física</td><td>Atraso de efeitos</td></tr>
+                <tr><td class="name">Semente de Orlin</td><td>Erva</td><td>4</td><td>Crescimento rápido</td><td>Aumento de Agilidade</td><td>Nutrição acelerada</td></tr>
+                <tr><td class="name">Lágrima de Fogo</td><td>Reagente</td><td>9</td><td>Efeito inflamável</td><td>Resistência ao calor</td><td>Energizante</td></tr>
+                <tr><td class="name">Gema de Névoa</td><td>Reagente</td><td>9</td><td>Camuflagem parcial</td><td>Ilusão visual</td><td>Dissipação venenosa</td></tr>
+                <tr><td class="name">Pó de Sombras</td><td>Reagente</td><td>8</td><td>Aumento de furtividade</td><td>Alteração de som</td><td>Leve debilitamento</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Forjador — Metais</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Material</th>
+                    <th>Raridade</th>
+                    <th>Preço</th>
+                    <th>Uso recomendado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="name">Metal Comum</td><td class="rarity-common">Comum</td><td>8</td><td>Reparos simples, lâminas comuns, rebites e reforços leves.</td></tr>
+                <tr><td class="name">Metal Incomum</td><td class="rarity-uncommon">Incomum</td><td>18</td><td>Armas incomuns, armaduras médias e mecanismos simples.</td></tr>
+                <tr><td class="name">Metal Raro</td><td class="rarity-rare">Raro</td><td>45</td><td>Armas raras, proteção reforçada e peças com canalização mágica.</td></tr>
+                <tr><td class="name">Metal Muito Raro</td><td class="rarity-very-rare">Muito raro</td><td>90</td><td>Equipamentos de elite, armaduras pesadas e armas de precisão superior.</td></tr>
+                <tr><td class="name">Metal Lendário</td><td>Lendário</td><td>180</td><td>Base de projetos únicos. Venda controlada pelo mestre.</td></tr>
+            </tbody>
+        </table>
+
+        <p class="note">Materiais são baratos porque não entregam poder direto sem profissão, tempo e receita. Eles existem para alimentar criação, não para substituir espólios de batalha.</p>
+
+        <div class="divider"><span class="diamond"></span><span class="diamond"></span><span class="diamond"></span></div>
+
+        <h2>⚔️ Armas ⚔️</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Arma</th>
+                    <th>Raridade</th>
+                    <th>Preço</th>
+                    <th>Tipo de Dano</th>
+                    <th>Alcance</th>
+                    <th>Peso</th>
+                    <th>Dano</th>
+                    <th>Propriedade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="name">Adaga de Arena</td><td class="rarity-common">Comum</td><td>35</td><td>Perfurante</td><td>1,5 m / 6 m</td><td>0,5 kg</td><td>7</td><td>Arremesso; discreta.</td></tr>
+                <tr><td class="name">Espada de Guarda</td><td class="rarity-common">Comum</td><td>55</td><td>Cortante</td><td>1,5 m</td><td>2,5 kg</td><td>11</td><td>Equilibrada.</td></tr>
+                <tr><td class="name">Maça de Rebite</td><td class="rarity-common">Comum</td><td>60</td><td>Contundente</td><td>1,5 m</td><td>3,5 kg</td><td>12</td><td>+1 em testes para quebrar objetos frágeis.</td></tr>
+                <tr><td class="name">Arco Curto de Treino</td><td class="rarity-common">Comum</td><td>65</td><td>Perfurante</td><td>12 m</td><td>1,5 kg</td><td>9</td><td>Requer duas mãos.</td></tr>
+                <tr><td class="name">Cajado de Faísca</td><td class="rarity-common">Comum</td><td>70</td><td>Mágico/Elétrico</td><td>14 m</td><td>2 kg</td><td>7</td><td>Dano mágico baixo e confiável.</td></tr>
+                <tr><td class="name">Machado de Gancho</td><td class="rarity-uncommon">Incomum</td><td>135</td><td>Cortante</td><td>1,5 m</td><td>4 kg</td><td>15</td><td>+1 em testes para puxar escudos, grades ou correntes.</td></tr>
+                <tr><td class="name">Lança do Fosso</td><td class="rarity-uncommon">Incomum</td><td>145</td><td>Perfurante</td><td>2,5 m</td><td>3 kg</td><td>13</td><td>Primeiro ataque contra alvo que se aproximou recebe +1 no acerto.</td></tr>
+                <tr><td class="name">Rapieira de Prata Baixa</td><td class="rarity-uncommon">Incomum</td><td>150</td><td>Perfurante</td><td>1,5 m</td><td>1 kg</td><td>10</td><td>+1 em ataques contra alvo sem armadura pesada.</td></tr>
+                <tr><td class="name">Martelo de Impacto</td><td class="rarity-uncommon">Incomum</td><td>165</td><td>Contundente</td><td>1,5 m</td><td>5 kg</td><td>16</td><td>Se causar dano, +1 no próximo teste para derrubar o alvo.</td></tr>
+                <tr><td class="name">Varinha de Brasa</td><td class="rarity-uncommon">Incomum</td><td>170</td><td>Mágico/Fogo</td><td>11 m</td><td>0,5 kg</td><td>8</td><td>Uma vez por combate, se acertar, causa +3 de dano de fogo.</td></tr>
+                <tr><td class="name">Espada Longa Serrilhada</td><td class="rarity-rare">Raro</td><td>420</td><td>Cortante</td><td>1,5 m</td><td>3,5 kg</td><td>16 / 18 com duas mãos</td><td>Se vencer o ataque por 5 ou mais, impõe sangramento leve por 1 turno.</td></tr>
+                <tr><td class="name">Machado do Carrasco Menor</td><td class="rarity-rare">Raro</td><td>470</td><td>Cortante</td><td>2,5 m</td><td>8 kg</td><td>25</td><td>Pesado; -1 em Esquiva enquanto empunhado.</td></tr>
+                <tr><td class="name">Arco de Osso Tenso</td><td class="rarity-rare">Raro</td><td>460</td><td>Perfurante</td><td>18 m</td><td>2 kg</td><td>14</td><td>+1 no ataque se o usuário não se moveu no turno.</td></tr>
+                <tr><td class="name">Tomo de Cinzas</td><td class="rarity-rare">Raro</td><td>500</td><td>Mágico/Fogo</td><td>14 m</td><td>1,5 kg</td><td>11</td><td>Uma vez por combate, alvo atingido faz VIG 12 ou sofre queimadura por 1 turno.</td></tr>
+                <tr><td class="name">Corrente do Carcereiro</td><td class="rarity-rare">Raro</td><td>520</td><td>Contundente</td><td>2,5 m</td><td>5 kg</td><td>17</td><td>+1 em testes de agarrar ou impedir deslocamento.</td></tr>
+                <tr><td class="name">Lâmina de Vidro Negro</td><td class="rarity-very-rare">Muito raro</td><td>980</td><td>Cortante/Vazio</td><td>1,5 m</td><td>2 kg</td><td>21</td><td>Uma vez por combate, ignora 2 pontos de redução física.</td></tr>
+                <tr><td class="name">Martelo de Bronze Vivo</td><td class="rarity-very-rare">Muito raro</td><td>1050</td><td>Contundente/Elétrico</td><td>1,5 m</td><td>6 kg</td><td>24</td><td>Se acertar construto ou alvo metálico, causa +5 de dano elétrico.</td></tr>
+                <tr><td class="name">Arco do Predador de Arena</td><td class="rarity-very-rare">Muito raro</td><td>1100</td><td>Perfurante</td><td>22 m</td><td>2,5 kg</td><td>17</td><td>+2 no primeiro ataque contra alvo ainda não ferido pelo usuário.</td></tr>
+                <tr><td class="name">Cajado do Véu Cinzento</td><td class="rarity-very-rare">Muito raro</td><td>1150</td><td>Mágico/Vazio</td><td>16 m</td><td>2 kg</td><td>14</td><td>Uma vez por combate, alvo atingido faz VAZ 13 ou perde 1 m de movimento por 1 turno.</td></tr>
+                <tr><td class="name">Lança de Sangue Frio</td><td class="rarity-very-rare">Muito raro</td><td>1200</td><td>Perfurante/Veneno</td><td>2,5 m</td><td>4 kg</td><td>20</td><td>Uma vez por combate, se causar dano, impõe VIG 13 contra envenenamento por 1 turno.</td></tr>
+            </tbody>
+        </table>
+
+        <div class="divider"><span class="diamond"></span><span class="diamond"></span><span class="diamond"></span></div>
+
+        <h2>🛡️ Armaduras 🛡️</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Armadura</th>
+                    <th>Raridade</th>
+                    <th>Preço</th>
+                    <th>Tipo</th>
+                    <th>Peso</th>
+                    <th>Defesa</th>
+                    <th>Propriedade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="name">Colete de Couro Grosso</td><td class="rarity-common">Comum</td><td>45</td><td>Leve</td><td>5 kg</td><td>+2</td><td>Sem penalidade.</td></tr>
+                <tr><td class="name">Peitoral de Anéis Rebatidos</td><td class="rarity-common">Comum</td><td>70</td><td>Média</td><td>8 kg</td><td>+3</td><td>Proteção inicial estável.</td></tr>
+                <tr><td class="name">Gibão de Escamas Simples</td><td class="rarity-common">Comum</td><td>85</td><td>Média</td><td>9 kg</td><td>+3</td><td>+1 contra o primeiro dano cortante do combate.</td></tr>
+                <tr><td class="name">Braçais de Couro Rígido</td><td class="rarity-common">Comum</td><td>35</td><td>Acessório</td><td>1 kg</td><td>+1</td><td>Não acumula com outro acessório defensivo.</td></tr>
+                <tr><td class="name">Grevas de Arena</td><td class="rarity-common">Comum</td><td>40</td><td>Acessório</td><td>2 kg</td><td>+1</td><td>+1 em testes contra queda.</td></tr>
+                <tr><td class="name">Cota Remendada</td><td class="rarity-common">Comum</td><td>95</td><td>Pesada</td><td>13 kg</td><td>+4</td><td>-1 em Esquiva.</td></tr>
+                <tr><td class="name">Manto de Viagem Reforçado</td><td class="rarity-uncommon">Incomum</td><td>130</td><td>Leve</td><td>4 kg</td><td>+2</td><td>+1 em VIG contra frio, poeira ou fadiga ambiental.</td></tr>
+                <tr><td class="name">Couro de Gladiador</td><td class="rarity-uncommon">Incomum</td><td>150</td><td>Leve</td><td>6 kg</td><td>+3</td><td>Uma vez por combate, reduz 3 de dano físico sofrido.</td></tr>
+                <tr><td class="name">Peitoral de Rebites</td><td class="rarity-uncommon">Incomum</td><td>170</td><td>Média</td><td>9 kg</td><td>+4</td><td>-1 em testes de furtividade.</td></tr>
+                <tr><td class="name">Cota de Malha Curta</td><td class="rarity-uncommon">Incomum</td><td>190</td><td>Média</td><td>10 kg</td><td>+4</td><td>Reduz 2 de dano cortante uma vez por rodada.</td></tr>
+                <tr><td class="name">Escudo de Madeira Ferrada</td><td class="rarity-uncommon">Incomum</td><td>120</td><td>Escudo</td><td>4 kg</td><td>+2</td><td>Ocupa uma mão.</td></tr>
+                <tr><td class="name">Couraça de Ossos</td><td class="rarity-uncommon">Incomum</td><td>210</td><td>Média</td><td>8 kg</td><td>+3</td><td>+1 em VAZ contra medo.</td></tr>
+                <tr><td class="name">Placas de Bronze Baixo</td><td class="rarity-rare">Raro</td><td>420</td><td>Pesada</td><td>15 kg</td><td>+5</td><td>-1 em Esquiva; reduz 3 de dano físico uma vez por rodada.</td></tr>
+                <tr><td class="name">Capa de Névoa Curta</td><td class="rarity-rare">Raro</td><td>390</td><td>Leve</td><td>2 kg</td><td>+2</td><td>+1 em Esquiva contra o primeiro ataque à distância do combate.</td></tr>
+                <tr><td class="name">Peitoral de Escamas Tratadas</td><td class="rarity-rare">Raro</td><td>450</td><td>Média</td><td>10 kg</td><td>+4</td><td>+1 em VIG contra veneno ou ácido.</td></tr>
+                <tr><td class="name">Manto de Cinzas Frias</td><td class="rarity-rare">Raro</td><td>430</td><td>Leve</td><td>3 kg</td><td>+2</td><td>Reduz 4 de dano de fogo uma vez por combate.</td></tr>
+                <tr><td class="name">Elmo do Desafiante</td><td class="rarity-rare">Raro</td><td>260</td><td>Acessório</td><td>2 kg</td><td>+1</td><td>+1 em VAZ contra medo, provocação ou confusão.</td></tr>
+                <tr><td class="name">Escudo de Ferro Baixo</td><td class="rarity-rare">Raro</td><td>310</td><td>Escudo</td><td>6 kg</td><td>+3</td><td>Ocupa uma mão; -1 em ataques com arma pesada.</td></tr>
+                <tr><td class="name">Cota do Duelista</td><td class="rarity-rare">Raro</td><td>470</td><td>Média</td><td>7 kg</td><td>+3</td><td>+1 em Esquiva se estiver usando arma leve.</td></tr>
+                <tr><td class="name">Armadura de Placas Segmentadas</td><td class="rarity-rare">Raro</td><td>560</td><td>Pesada</td><td>17 kg</td><td>+5</td><td>Reduz 5 de dano contundente uma vez por combate.</td></tr>
+                <tr><td class="name">Couraça de Cristal Fosco</td><td class="rarity-very-rare">Muito raro</td><td>900</td><td>Média</td><td>9 kg</td><td>+4</td><td>Reduz 5 de dano mágico uma vez por combate.</td></tr>
+                <tr><td class="name">Placas do Muro Vivo</td><td class="rarity-very-rare">Muito raro</td><td>1050</td><td>Pesada</td><td>19 kg</td><td>+6</td><td>-2 em Esquiva; reduz 4 de dano físico uma vez por rodada.</td></tr>
+                <tr><td class="name">Manto de Sombras Costuradas</td><td class="rarity-very-rare">Muito raro</td><td>880</td><td>Leve</td><td>3 kg</td><td>+3</td><td>+2 em Esquiva contra o primeiro ataque à distância do combate.</td></tr>
+                <tr><td class="name">Escudo Solar Menor</td><td class="rarity-very-rare">Muito raro</td><td>820</td><td>Escudo</td><td>5 kg</td><td>+3</td><td>Uma vez por combate, reduz 8 de dano de fogo ou sagrado.</td></tr>
+                <tr><td class="name">Elmo da Mente Clara</td><td class="rarity-very-rare">Muito raro</td><td>740</td><td>Acessório</td><td>2 kg</td><td>+1</td><td>+2 em VAZ contra medo, confusão e efeitos mentais.</td></tr>
+                <tr><td class="name">Armadura de Couro de Basilisco</td><td class="rarity-very-rare">Muito raro</td><td>960</td><td>Média</td><td>8 kg</td><td>+4</td><td>+2 em VIG contra veneno; reduz 3 de dano venenoso uma vez por rodada.</td></tr>
+                <tr><td class="name">Grevas do Corredor de Fosso</td><td class="rarity-very-rare">Muito raro</td><td>680</td><td>Acessório</td><td>2 kg</td><td>+1</td><td>Uma vez por combate, ignora 2 m de terreno difícil.</td></tr>
+                <tr><td class="name">Peitoral de Prata Fria</td><td class="rarity-very-rare">Muito raro</td><td>1020</td><td>Média</td><td>11 kg</td><td>+5</td><td>Reduz 5 de dano necrótico ou vazio uma vez por combate.</td></tr>
+                <tr><td class="name">Cota de Anéis Rubros</td><td class="rarity-very-rare">Muito raro</td><td>980</td><td>Média</td><td>10 kg</td><td>+5</td><td>Se sofrer sangramento, recebe +1 em VIG para resistir à condição.</td></tr>
+                <tr><td class="name">Placas do Campeão Menor</td><td class="rarity-very-rare">Muito raro</td><td>1250</td><td>Pesada</td><td>20 kg</td><td>+6</td><td>-2 em Esquiva; uma vez por combate, transforma um crítico sofrido em acerto normal.</td></tr>
+            </tbody>
+        </table>
+
+        <div class="divider"><span class="diamond"></span><span class="diamond"></span><span class="diamond"></span></div>
+
+        <h2>🪤 Armadilhas 🪤</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Armadilha</th>
+                    <th>Raridade</th>
+                    <th>Preço</th>
+                    <th>Ativação</th>
+                    <th>Efeito</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="name">Pregos de Arena</td><td class="rarity-common">Comum</td><td>25</td><td>Área de 2 m</td><td>Primeira criatura que atravessar faz DES 10 ou sofre 8 de dano perfurante e perde 1 m de movimento no turno.</td></tr>
+                <tr><td class="name">Rede de Chumbo</td><td class="rarity-uncommon">Incomum</td><td>65</td><td>Alcance 6 m</td><td>Alvo faz FOR 11 ou fica preso até gastar ação para se soltar.</td></tr>
+                <tr><td class="name">Frasco de Óleo Flamejante</td><td class="rarity-uncommon">Incomum</td><td>70</td><td>Área de 2 m</td><td>Área fica escorregadia. Se receber fogo, causa 10 de dano de fogo no primeiro turno.</td></tr>
+                <tr><td class="name">Grampo de Urso</td><td class="rarity-rare">Raro</td><td>160</td><td>Corpo a corpo / chão</td><td>Alvo faz DES 12 ou sofre 18 de dano perfurante e não pode se mover até vencer FOR 12.</td></tr>
+                <tr><td class="name">Selo de Alarme Rúnico</td><td class="rarity-rare">Raro</td><td>180</td><td>Área de 4 m</td><td>Quando ativado, revela criaturas ocultas na área e impõe -1 em furtividade por 1 turno.</td></tr>
+            </tbody>
+        </table>
+
+        <div class="divider"><span class="diamond"></span><span class="diamond"></span><span class="diamond"></span></div>
+
+        <h2>🎒 Outros 🎒</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Raridade</th>
+                    <th>Preço</th>
+                    <th>Peso</th>
+                    <th>Uso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="name">Corda de Cânhamo</td><td class="rarity-common">Comum</td><td>15</td><td>2 kg</td><td>15 m de corda para escalada, amarração ou improviso.</td></tr>
+                <tr><td class="name">Kit de Reparos Simples</td><td class="rarity-common">Comum</td><td>25</td><td>1 kg</td><td>Permite reparar equipamento comum fora de combate.</td></tr>
+                <tr><td class="name">Lanterna de Óleo</td><td class="rarity-common">Comum</td><td>20</td><td>1 kg</td><td>Ilumina uma área curta. Requer óleo.</td></tr>
+                <tr><td class="name">Giz de Marcação</td><td class="rarity-common">Comum</td><td>5</td><td>0 kg</td><td>Marca paredes, rotas e símbolos simples.</td></tr>
+                <tr><td class="name">Algemas de Ferro Baixo</td><td class="rarity-uncommon">Incomum</td><td>55</td><td>1,5 kg</td><td>Prende criatura rendida. Para romper, FOR 13.</td></tr>
+                <tr><td class="name">Bolsa de Componentes</td><td class="rarity-uncommon">Incomum</td><td>80</td><td>1 kg</td><td>Armazena ingredientes pequenos sem danificar ervas, pós e reagentes.</td></tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

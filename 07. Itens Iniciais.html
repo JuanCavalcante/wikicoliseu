@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>07. Itens Iniciais</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 28px 42px;
+            background: #34383e;
+            color: #f2f2f2;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.45;
+        }
+
+        .page {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            color: #fff200;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 42px 0 18px;
+            color: #fff200;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 27px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        h3 {
+            margin: 28px 0 12px;
+            color: #ffcc00;
+            font-size: 21px;
+            font-style: italic;
+        }
+
+        p {
+            margin: 18px 0;
+            text-align: justify;
+            text-indent: 36px;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 6px auto 30px;
+            max-width: 560px;
+            color: #a55300;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            height: 2px;
+            flex: 1;
+            background: #c7b48a;
+        }
+
+        .diamond {
+            width: 10px;
+            height: 10px;
+            background: #a55300;
+            transform: rotate(45deg);
+            display: inline-block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0 26px;
+            background: rgba(0, 0, 0, 0.16);
+            border: 1px solid #8b7c55;
+        }
+
+        th,
+        td {
+            padding: 10px 12px;
+            border: 1px solid #6f6548;
+            vertical-align: middle;
+        }
+
+        th {
+            color: #ffcc00;
+            background: rgba(0, 0, 0, 0.28);
+            font-style: italic;
+            text-align: left;
+        }
+
+        td:not(:first-child),
+        th:not(:first-child) {
+            text-align: center;
+        }
+
+        .name {
+            color: #ffcc00;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        ul {
+            margin: 10px 0 28px 28px;
+            padding: 0;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        strong {
+            color: #ffcc00;
+            font-style: italic;
+        }
+
+        .note {
+            color: #f8e9b0;
+            font-style: italic;
+            text-align: center;
+            text-indent: 0;
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <h1>Itens Iniciais</h1>
+        <div class="divider"><span class="diamond"></span></div>
+
+        <p>Nesta seção, você encontrará a lista de equipamentos iniciais disponíveis para escolher ao iniciar o jogo. Independente da classe escolhida, cada campeão pode usar aquilo que melhor representa seu estilo de combate. Caso deseje, também é possível iniciar sem algum equipamento, assumindo esse desafio.</p>
+
+        <p>Cada campeão tem direito de começar com <strong>uma arma</strong>, <strong>um peitoral</strong> e <strong>uma mochila</strong>. Os valores abaixo foram ajustados para manter o início do jogo letal, mas controlado. Armas físicas possuem dano mais alto porque ainda enfrentam defesa física. Armas mágicas possuem dano menor porque dano mágico ignora completamente defesa física e só pode ser resistido por Esquiva, armaduras com propriedades mágicas ou magias.</p>
+
+        <div class="divider"><span class="diamond"></span><span class="diamond"></span><span class="diamond"></span></div>
+
+        <h2>📜 Armas 📜</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Arma</th>
+                    <th>Tipo de Dano</th>
+                    <th>Alcance</th>
+                    <th>Peso</th>
+                    <th>Dano</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="name">Espada Curta</td><td>Cortante</td><td>1,5 m</td><td>2 kg</td><td>10</td></tr>
+                <tr><td class="name">Espada Longa</td><td>Cortante</td><td>1,5 m</td><td>3,5 kg</td><td>13 / 15 com duas mãos</td></tr>
+                <tr><td class="name">Machado Curto</td><td>Cortante</td><td>1,5 m</td><td>4 kg</td><td>14 / 16 com duas mãos</td></tr>
+                <tr><td class="name">Machado Longo</td><td>Cortante</td><td>2,5 m</td><td>7 kg</td><td>22</td></tr>
+                <tr><td class="name">Adaga Simples</td><td>Perfurante</td><td>1,5 m / 6 m arremesso</td><td>0,5 kg</td><td>6</td></tr>
+                <tr><td class="name">Maça</td><td>Contundente</td><td>1,5 m</td><td>3 kg</td><td>11</td></tr>
+                <tr><td class="name">Martelo de uma Mão</td><td>Contundente</td><td>1,5 m</td><td>4 kg</td><td>12</td></tr>
+                <tr><td class="name">Rapieira</td><td>Perfurante</td><td>1,5 m</td><td>1,5 kg</td><td>9</td></tr>
+                <tr><td class="name">Cajado</td><td>Mágico</td><td>16 m</td><td>2 kg</td><td>7</td></tr>
+                <tr><td class="name">Varinha</td><td>Mágico</td><td>11 m</td><td>0,5 kg</td><td>6</td></tr>
+                <tr><td class="name">Tomo de Feitiços</td><td>Mágico</td><td>14 m</td><td>1,5 kg</td><td>7</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Notas de Balanceamento das Armas</h3>
+        <ul>
+            <li><strong>Espada Curta:</strong> arma leve e segura, boa para builds ágeis ou uso secundário.</li>
+            <li><strong>Espada Longa:</strong> opção versátil; o dano maior exige uso com duas mãos.</li>
+            <li><strong>Machado Curto:</strong> causa mais dano que a espada longa, mas pesa mais e favorece campeões fortes.</li>
+            <li><strong>Machado Longo:</strong> maior dano inicial, porém pesado, de duas mãos e ruim para campeões com baixo limite de peso.</li>
+            <li><strong>Adaga Simples:</strong> dano baixo, mas compensa com peso mínimo, arremesso e uso ágil.</li>
+            <li><strong>Maça:</strong> alternativa contundente simples, útil contra alvos protegidos ou resistentes a corte.</li>
+            <li><strong>Martelo de uma Mão:</strong> contundente mais pesado e mais forte que a maça, mas pior para controle de peso.</li>
+            <li><strong>Rapieira:</strong> perfurante leve, focada em precisão e estilo de duelista, com dano abaixo das armas pesadas.</li>
+            <li><strong>Cajado:</strong> maior alcance mágico inicial, dano baixo para compensar a vantagem contra defesa física.</li>
+            <li><strong>Varinha:</strong> foco mágico leve e prático, menor dano e menor alcance entre os focos.</li>
+            <li><strong>Tomo de Feitiços:</strong> foco mágico intermediário, equilibrado entre alcance, peso e dano.</li>
+        </ul>
+
+        <div class="divider"><span class="diamond"></span><span class="diamond"></span><span class="diamond"></span></div>
+
+        <h2>🛡️ Peitorais 🛡️</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Peitoral</th>
+                    <th>Tipo de Armadura</th>
+                    <th>Peso</th>
+                    <th>Defesa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="name">Peitoral de Couro</td><td>Leve</td><td>5 kg</td><td>+2</td></tr>
+                <tr><td class="name">Peitoral de Anéis</td><td>Média</td><td>8 kg</td><td>+3</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Notas de Balanceamento dos Peitorais</h3>
+        <ul>
+            <li><strong>Peitoral de Couro:</strong> proteção inicial leve, indicado para campeões que dependem de Esquiva, mobilidade e baixo peso.</li>
+            <li><strong>Peitoral de Anéis:</strong> proteção maior, mas cobra custo real em peso e pode acelerar a condição de Sobrecarregado em personagens fracos.</li>
+        </ul>
+
+        <div class="divider"><span class="diamond"></span><span class="diamond"></span><span class="diamond"></span></div>
+
+        <h2>🎒 Mochila 🎒</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Função / Capacidade</th>
+                    <th>Peso</th>
+                    <th>Defesa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="name">Mochila</td><td>Capacidade: 10 kg</td><td>1 kg</td><td>0</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Notas de Uso da Mochila</h3>
+        <ul>
+            <li>A mochila não concede defesa.</li>
+            <li>O peso da mochila conta no peso total carregado.</li>
+            <li>A capacidade de 10 kg representa quanto ela ajuda a organizar e carregar itens, mas não anula as regras de peso e sobrecarga do campeão.</li>
+        </ul>
+
+        <div class="divider"><span class="diamond"></span><span class="diamond"></span><span class="diamond"></span></div>
+
+        <h2>⚖️ Referência Rápida de Sobrecarga ⚖️</h2>
+        <p class="note">Quando o campeão está sobrecarregado, o peso passa a interferir diretamente em movimentação, esquiva e consumo de Fôlego.</p>
+        <ul>
+            <li>Perde 2 m de movimento a cada 5 kg acima do limite, podendo ficar limitado a 2 m por turno.</li>
+            <li>Perde 3 de Esquiva a cada 5 kg acima do limite.</li>
+            <li>Ações básicas passam a consumir 10 de Fôlego em vez de 5.</li>
+            <li>Habilidades que usam Fôlego passam a custar 15% a mais.</li>
+        </ul>
+    </main>
+</body>
+</html>
